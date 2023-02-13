@@ -19,7 +19,7 @@ class ProductView (APIView):
         serializer = ProductSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-        return Response({"Response": "Data is Successfully saved"}, serializer.data)
+        return Response({"Response": "Data is Successfully saved", "data":serializer.data})
 
 
 class OrderView (APIView):
@@ -35,4 +35,4 @@ class OrderView (APIView):
         serializer = OrderSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-        return Response({"Response": "Data is Successfully saved"}, serializer.data)
+        return Response({"Response": "Data is Successfully saved", "data": serializer.data})
