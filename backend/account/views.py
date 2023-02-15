@@ -6,9 +6,19 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.contrib.auth import authenticate
 from .serializers import UserSerializer
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 
+class MyTokenObatainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls,user):
+        token=super().get_token(user)
+        token['username']=user.username
+        print(user.username)
+        return token
 
- 
+class MyTokenObtainPair(TokenObtainPairView):
+    serializer_class=MyTokenObatainPairSerializer
 
 class UserAuthenticationView(APIView):
 
