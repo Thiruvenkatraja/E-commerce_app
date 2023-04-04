@@ -2,12 +2,13 @@ from rest_framework.response import Response
 from .serializers import OrderSerializer
 from .models import Order
 from rest_framework.views import APIView
-
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 
 class OrderView (APIView):
     serializer_class = OrderSerializer
+    permission_classes=[IsAuthenticated]
 
     def get(self, request, id=None, *args, **kwargs):
         if id:

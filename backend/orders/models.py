@@ -14,4 +14,4 @@ class Order(models.Model):
     DeliveryDate = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.CustomerName} - {self.Product}"
+        return f"{self.CustomerName}"

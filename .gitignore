@@ -5,3 +5,4 @@ test1.py
 .pyc
 __pycache__/
 /organic
+*migrations

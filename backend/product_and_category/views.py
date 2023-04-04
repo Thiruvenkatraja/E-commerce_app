@@ -2,12 +2,13 @@ from rest_framework.response import Response
 from .serializers import ProductSerializer,CategorySerializer
 from .models import Product,Category
 from rest_framework.views import APIView
-
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 
-class ProdcutView (APIView):
+class ProductView (APIView):
     serializer_class = ProductSerializer
+    permission_classes=[IsAuthenticated]
 
     def get(self, request, id=None, *args, **kwargs):
         if id:
@@ -43,6 +44,7 @@ class ProdcutView (APIView):
 
 class CategoryView (APIView):
     serializer_class = CategorySerializer
+    permission_classes=[IsAuthenticated]
 
     def get(self, request, id=None, *args, **kwargs):
         if id:

@@ -12,8 +12,10 @@ class Inventory(models.Model):
     unit=models.CharField(max_length=10)
     Date = models.DateTimeField(auto_now=True)
     
+    class Meta:
+        verbose_name_plural = "Inventory"
 
     def __str__(self):
-        return self.ProductName
+        return f"{self.ProductName}"
     
 
