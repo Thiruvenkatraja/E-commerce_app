@@ -8,5 +8,5 @@ test1.py
 /env/
 /products/
 .vscode/
-__pycache__/
-migrations/
+**/__pycache__/
+**/migrations/
