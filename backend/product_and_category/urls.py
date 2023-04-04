@@ -9,3 +9,4 @@ urlpatterns = [
     path("category/<int:id>/update", CategoryView.as_view()),
     path("category/<int:id>/delete", CategoryView.as_view()),
 ]
+
