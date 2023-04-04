@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'orders',
     'account',
     'product_and_category',
+    'cart',
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
@@ -50,6 +51,7 @@ REST_FRAMEWORK = {
     
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication'
     )
 
 }
@@ -135,8 +137,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'organic',
+        'USER': 'postgres',
+        'PASSWORD': '12345',
+        'HOST': 'localhost'
     }
 }
 
