@@ -6,3 +6,6 @@ test1.py
 __pycache__/
 /organic
 *migrations
+.vscode/
+__pycache__/
+migrations/
