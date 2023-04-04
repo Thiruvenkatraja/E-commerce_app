@@ -1,26 +1,11 @@
-import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Box from "@mui/material/Box";
-import { navLinks } from "../constants";
-// import { Carousel } from "react-responsive-carousel";
+import { Height } from "@mui/icons-material";
 import Products from "./Products";
 export const Home = () => {
   return (
-    <div>
-      {/* <Carousel>
-        <div>
-          <img src="assets/1.jpeg" />
-          <p className="legend">Legend 1</p>
-        </div>
-        <div>
-          <img src="assets/2.jpeg" />
-          <p className="legend">Legend 2</p>
-        </div>
-        <div>
-          <img src="assets/3.jpeg" />
-          <p className="legend">Legend 3</p>
-        </div>
-      </Carousel> */}
+    <div style={{ height: "50vh" }}>
+      <div
+        style={{ backgroundColor: "white", width: "50rm", height:"25rem" }}
+      ></div>
       <Products />
     </div>
   );
