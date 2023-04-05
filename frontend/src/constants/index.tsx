@@ -6,10 +6,74 @@ export const navLinks = [
   { name: "Become a Vendor", link: "becomeaVendor" },
 ];
 export const tabItems = [
-  "Hot Trending",
-  "Grosery",
-  "Electronics",
-  "Electronics",
-  "Electronics",
-  "Electronics",
+  {
+    label: "Trending",
+    value: 1,
+  },
+  {
+    label: "New Arrivals",
+    value: 2,
+  },
+  {
+    label: "Vegetable",
+    value: 3,
+  },
+  {
+    label: "Fruits",
+    value: 4,
+  },
+  {
+    label: "Spices",
+    value: 5,
+  },
+  {
+    label: "Dairy Products",
+    value: 6,
+  },
+  {
+    label: "Nuts",
+    value: 7,
+  },
+  {
+    label: "Flowers",
+    value: 8,
+  },
+  {
+    label: "Grocery",
+    value: 9,
+  },
+  {
+    label: "Snacks",
+    value: 10,
+  },
+
+  {
+    label: "Organic Flour",
+    value: 11,
+  },
+  
+  {
+    label: "Pickles & Pastes",
+    value: 13,
+  },
+  {
+    label: "Oils & Ghee",
+    value: 14,
+  },
+  {
+    label: "Dry Fruits",
+    value: 15,
+  },
+  {
+    label: "Lentils & Pulses",
+    value: 16,
+  },
+  {
+    label: "Rice & Wheat",
+    value: 17,
+  },
+  {
+    label: "Organic Juices",
+    value: 18,
+  },
 ];
