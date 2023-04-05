@@ -1,26 +1,33 @@
 import React from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import Box from "@mui/material/Box";
 import { navLinks } from "../constants";
-// import { Carousel } from "react-responsive-carousel";
+import { Carousel } from "antd";
 import Products from "./Products";
 export const Home = () => {
+  const contentStyle: React.CSSProperties = {
+    height: "25rem",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
   return (
     <div>
-      {/* <Carousel>
+      <Carousel autoplay>
         <div>
-          <img src="assets/1.jpeg" />
-          <p className="legend">Legend 1</p>
+          <h1 style={contentStyle}>Page 1</h1>
         </div>
         <div>
-          <img src="assets/2.jpeg" />
-          <p className="legend">Legend 2</p>
+          <h1 style={contentStyle}>Page 2</h1>
         </div>
         <div>
-          <img src="assets/3.jpeg" />
-          <p className="legend">Legend 3</p>
+          <h1 style={contentStyle}>Page 3</h1>
         </div>
-      </Carousel> */}
+        <div>
+          <h1 style={contentStyle}>Page 4</h1>
+        </div>
+      </Carousel>
       <Products />
     </div>
   );

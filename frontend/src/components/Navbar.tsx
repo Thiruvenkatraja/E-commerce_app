@@ -135,7 +135,13 @@ function Navbar() {
               <Button
                 key={links}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" ,TextDecoder:"none",textTransform:"none"}}
+                sx={{
+                  my: 2,
+                  color: "black",
+                  display: "block",
+                  TextDecoder: "none",
+                  textTransform: "none",
+                }}
               >
                 {links}
               </Button>

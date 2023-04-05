@@ -13,7 +13,7 @@ export default function Products() {
   };
 
   return (
-    <Box sx={{ width: "100%", padding: "2rem", typography: "body1" }}>
+    <Box sx={{   padding: "2rem 3rem", typography: "body1" }}>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
@@ -29,6 +29,7 @@ export default function Products() {
             <Tab label="Item One" value="10" />
             <Tab label="Item Two" value="11" />
             <Tab label="Item Three" value="12" />
+            <Tab label="Item Three" value="12" />
           </TabList>
         </Box>
         <TabPanel value="1">Item One</TabPanel>
@@ -42,6 +43,7 @@ export default function Products() {
         <TabPanel value="9">Item Three</TabPanel>
         <TabPanel value="10">Item One</TabPanel>
         <TabPanel value="11">Item Two</TabPanel>
+        <TabPanel value="12">Item Three</TabPanel>
         <TabPanel value="12">Item Three</TabPanel>
       </TabContext>
     </Box>
