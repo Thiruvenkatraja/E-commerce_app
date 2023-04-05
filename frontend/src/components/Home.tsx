@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { navLinks } from "../constants";
 import { Carousel } from "antd";
 import Products from "./Products";
-export const Home = () => {
+const Home = () => {
   const contentStyle: React.CSSProperties = {
     height: "25rem",
     color: "#fff",
@@ -32,3 +32,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

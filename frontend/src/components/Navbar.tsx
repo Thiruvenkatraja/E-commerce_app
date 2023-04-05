@@ -12,8 +12,9 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-
 import { navLinks } from "../constants";
+import { Link } from "react-router-dom";
+
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Navbar() {
@@ -98,11 +99,21 @@ function Navbar() {
               }}
             >
               {navLinks.map((links) => (
-                <MenuItem key={links} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ color: "black" }} textAlign="center">
-                    {links}
-                  </Typography>
-                </MenuItem>
+                <Button
+                  key={links.link}
+                  to={`/${links.link}`}
+                  component={Link}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "black",
+                    display: "block",
+                    TextDecoder: "none",
+                    textTransform: "none",
+                  }}
+                >
+                  {links.name}
+                </Button>
               ))}
             </Menu>
           </Box>
@@ -133,7 +144,9 @@ function Navbar() {
           >
             {navLinks.map((links) => (
               <Button
-                key={links}
+                key={links.link}
+                to={`/${links.link}`}
+                component={Link}
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
@@ -143,7 +156,7 @@ function Navbar() {
                   textTransform: "none",
                 }}
               >
-                {links}
+                {links.name}
               </Button>
             ))}
           </Box>
