@@ -6,7 +6,6 @@ from django.db import models
 
 class Category(models.Model):
     Category = models.CharField(max_length=20)
-    CategoryId = models.CharField(max_length=10)
 
     class Meta:
         verbose_name_plural = "Category"
@@ -17,7 +16,6 @@ class Category(models.Model):
 class Product(models.Model):
     ProductName = models.CharField(max_length=20)
     Price = models.DecimalField(max_digits=7,decimal_places=2)
-    ProductId = models.CharField(max_length=10)
     Category = models.ForeignKey(Category, on_delete=models.PROTECT)
     ImageURL = models.ImageField(upload_to='products/', default=None)
 

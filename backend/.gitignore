@@ -7,3 +7,6 @@ test1.py
 ./products
 /env/
 /products/
+.vscode/
+**/__pycache__/
+**/migrations/
