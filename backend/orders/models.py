@@ -7,10 +7,9 @@ from product_and_category.models import Category
 
 class Order(models.Model):
     CustomerName = models.CharField(max_length=25)
-    ProductName = models.ForeignKey(Inventory, on_delete=models.PROTECT)
+    Inventory = models.ForeignKey(Inventory, on_delete=models.PROTECT)
     Price = models.DecimalField(max_digits=6, decimal_places=2)
     Quantity = models.DecimalField(max_digits=6, decimal_places=2)
-    Category = models.ForeignKey(Category, on_delete=models.PROTECT)
     DeliveryDate = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

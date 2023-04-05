@@ -4,8 +4,7 @@ from product_and_category.models import Category,Product
 
 # Create your models here.
 class Inventory(models.Model):
-    ProductName = models.ForeignKey(Product, on_delete=models.PROTECT)
-    ProductId = models.CharField(max_length=10, primary_key=True)
+    Product = models.ForeignKey(Product, on_delete=models.PROTECT)
     Price = models.DecimalField(max_digits=6, decimal_places=2)
     Category = models.ForeignKey(Category, on_delete=models.PROTECT)
     Quantity = models.IntegerField()
@@ -16,6 +15,6 @@ class Inventory(models.Model):
         verbose_name_plural = "Inventory"
 
     def __str__(self):
-        return f"{self.ProductName}"
+        return f"{self.Product}"
     
 
