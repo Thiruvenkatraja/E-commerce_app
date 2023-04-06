@@ -5,7 +5,7 @@ from django.utils import timezone
 # Create your models here
 
 
-class User(AbstractUser):
+class AuthUser(AbstractUser):
     CreatedAt = models.DateTimeField(
         auto_now_add=True,  blank=False, null=False)
     UpdatedAt = models.DateTimeField(auto_now=True, blank=False, null=False)
