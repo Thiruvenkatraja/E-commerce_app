@@ -35,11 +35,52 @@ export default function Products() {
             ))}
           </Tabs>
         </Box>
-        {tabItems.map((items) => (
-          <TabPanel value={items.value}>
-            <Trending />
-          </TabPanel>
-        ))}
+
+        <TabPanel value={1}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={2}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={3}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={4}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={5}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={6}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={7}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={8}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={9}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={10}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={11}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={12}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={13}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={14}>
+          <Trending />
+        </TabPanel>
+        <TabPanel value={15}>
+          <Trending />
+        </TabPanel>
       </TabContext>
     </Box>
   );
