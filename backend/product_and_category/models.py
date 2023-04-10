@@ -5,7 +5,7 @@ from django.db import models
 
 
 class Category(models.Model):
-    Category = models.CharField(max_length=20)
+    Category = models.CharField(max_length=20, default=None)
 
     class Meta:
         verbose_name_plural = "Category"
@@ -18,6 +18,9 @@ class Product(models.Model):
     Price = models.DecimalField(max_digits=7,decimal_places=2)
     Category = models.ForeignKey(Category, on_delete=models.PROTECT)
     ImageURL = models.ImageField(upload_to='products/', default=None)
+    ProductQuantity = models.IntegerField(default=None)
+    UOM = models.CharField(max_length=10,default=None)
+    Units = models.DecimalField(max_digits=7,decimal_places=2)
 
     def __str__(self):
         return f"{self.ProductName}"
