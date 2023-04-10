@@ -4,6 +4,7 @@ from product_and_category.models import Product
 
 class Cart(models.Model):
     Product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    Quantity = models.PositiveIntegerField(default=1)
     
     def __str__(self):
-        return f"{self.ProductId}"
+        return f"{self.Product.ProductName}"
