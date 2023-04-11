@@ -22,7 +22,7 @@ class Product(models.Model):
     Price = models.DecimalField(max_digits=7,decimal_places=2)
     Category = models.ForeignKey(Category, on_delete=models.PROTECT)
     ImageURL = models.ImageField(upload_to='products/', default=None)
-    ProductQuantity = models.IntegerField(default=None)
+    ProductStock = models.PositiveIntegerField(default=None)
     UOM = models.CharField(max_length=10,default=None)
     Units = models.DecimalField(max_digits=7,decimal_places=2)
 
