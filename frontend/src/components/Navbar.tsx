@@ -42,10 +42,11 @@ function Navbar() {
 
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
         backgroundColor: "#FAF7F0",
-        color: "black",
+          color: "black",
+        
       }}
     >
       <Container maxWidth="lg">
@@ -139,7 +140,7 @@ function Navbar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", justifyContent: "center" },
+              display: { xs: "none", md: "flex",gap:"10px", justifyContent: "center" },
             }}
           >
             {navLinks.map((links) => (

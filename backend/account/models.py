@@ -6,8 +6,7 @@ from django.utils import timezone
 
 
 class AuthUser(AbstractUser):
-    CreatedAt = models.DateTimeField(
-        auto_now_add=True,  blank=False, null=False)
+    CreatedAt = models.DateTimeField(auto_now_add=True,  blank=False, null=False)
     UpdatedAt = models.DateTimeField(auto_now=True, blank=False, null=False)
 
     class Meta:
