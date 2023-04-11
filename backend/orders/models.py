@@ -14,3 +14,7 @@ class Order(models.Model):
 
     def __str__(self):
         return f"{self.CustomerName}"
+    
+    class Meta:
+        db_table = 'Order'
+        verbose_name_plural = 'Order'

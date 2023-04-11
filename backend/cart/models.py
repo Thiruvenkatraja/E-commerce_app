@@ -8,3 +8,7 @@ class Cart(models.Model):
     
     def __str__(self):
         return f"{self.Product.ProductName}"
+
+    class Meta:
+        db_table = 'Cart'
+        verbose_name_plural = 'Cart'

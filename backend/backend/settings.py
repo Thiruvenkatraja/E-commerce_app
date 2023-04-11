@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'account',
     'product_and_category',
     'cart',
+    'checkout',
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
