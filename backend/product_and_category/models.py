@@ -12,6 +12,10 @@ class Category(models.Model):
 
     def __str__(self):
         return f" {self.Category}"
+    
+    class Meta:
+        db_table = 'Category'
+        verbose_name_plural = 'Category'
 
 class Product(models.Model):
     ProductName = models.CharField(max_length=20)
@@ -22,5 +26,6 @@ class Product(models.Model):
     def __str__(self):
         return f"{self.ProductName}"
 
-
-
+    class Meta:
+        db_table = 'Product'
+        verbose_name_plural = 'Product'
