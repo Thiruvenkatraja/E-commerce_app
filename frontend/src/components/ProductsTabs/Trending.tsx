@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { FruitsList } from "../../utils/GETRequests";
 import axios from "axios";
 import { Space, Select, Card } from "antd";
-
 const { Meta } = Card;
 
-const Cards = () => (
-  <Tilt tiltEnable={false} scale={1.02} transitionSpeed={3500}>
-    <Card
-      hoverable
-      style={{ width: 240 }}
-      cover={
-        <img
-          alt="example"
-          src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-        />
-      }
-    >
-      <Meta title="Europe Street beat" description="www.instagram.com" />
-    </Card>
-    {/* <div
+const Cards = () => {
+  return (
+    <Tilt tiltEnable={false} scale={1.02} transitionSpeed={3500}>
+      <Card
+        hoverable
+        style={{ width: 240 }}
+        cover={
+          <img
+            alt="example"
+            src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+          />
+        }
+      >
+        <Meta title="Europe Street beat" description="www.instagram.com" />
+      </Card>
+      {/* <div
       style={{
         height: "16rem",
         width: "15rem",
@@ -54,8 +54,9 @@ const Cards = () => (
         />
       </Space>
     </div> */}
-  </Tilt>
-);
+    </Tilt>
+  );
+};
 
 const Trending = () => {
   const FruitsList = () => {
