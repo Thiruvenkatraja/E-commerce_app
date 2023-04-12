@@ -11,6 +11,7 @@ const Home = () => {
     lineHeight: "160px",
     textAlign: "center",
     background: "#364d79",
+    margin: 0,
   };
   return (
     <div>

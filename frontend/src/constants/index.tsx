@@ -54,26 +54,26 @@ export const tabItems = [
   
   {
     label: "Pickles & Pastes",
-    value: 13,
+    value: 12,
   },
   {
     label: "Oils & Ghee",
-    value: 14,
+    value: 13,
   },
   {
     label: "Dry Fruits",
-    value: 15,
+    value: 14,
   },
   {
     label: "Lentils & Pulses",
-    value: 16,
+    value: 15,
   },
   {
     label: "Rice & Wheat",
-    value: 17,
+    value: 16,
   },
   {
     label: "Organic Juices",
-    value: 18,
+    value: 17,
   },
 ];
