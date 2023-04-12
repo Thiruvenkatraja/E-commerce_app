@@ -7,6 +7,24 @@ import TabPanel from "@mui/lab/TabPanel";
 import { tabItems } from "../constants";
 import Tabs from "@mui/material/Tabs";
 import Trending from "./ProductsTabs/Trending";
+import {
+  DairyProducts,
+  DryFruits,
+  Flowers,
+  Fruits,
+  Grocery,
+  LentilsPulses,
+  NewArrivals,
+  Nuts,
+  OilsGhee,
+  OrganicFlour,
+  OrganicJuices,
+  PicklesPastes,
+  RiceWheat,
+  Snacks,
+  Spices,
+  Vegetable,
+} from "./ProductsTabs";
 export default function Products() {
   const [value, setValue] = React.useState(1);
 
@@ -40,46 +58,52 @@ export default function Products() {
           <Trending />
         </TabPanel>
         <TabPanel value={2}>
-          <Trending />
+          <NewArrivals />
         </TabPanel>
         <TabPanel value={3}>
-          <Trending />
+          <Vegetable />
         </TabPanel>
         <TabPanel value={4}>
-          <Trending />
+          <Fruits />
         </TabPanel>
         <TabPanel value={5}>
-          <Trending />
+          <Spices />
         </TabPanel>
         <TabPanel value={6}>
-          <Trending />
+          <DairyProducts />
         </TabPanel>
         <TabPanel value={7}>
-          <Trending />
+          <Nuts />
         </TabPanel>
         <TabPanel value={8}>
-          <Trending />
+          <Flowers />
         </TabPanel>
         <TabPanel value={9}>
-          <Trending />
+          <Grocery />
         </TabPanel>
         <TabPanel value={10}>
-          <Trending />
+          <Snacks />
         </TabPanel>
         <TabPanel value={11}>
-          <Trending />
+          <OrganicFlour />
         </TabPanel>
         <TabPanel value={12}>
-          <Trending />
+          <PicklesPastes />
         </TabPanel>
         <TabPanel value={13}>
-          <Trending />
+          <OilsGhee />
         </TabPanel>
         <TabPanel value={14}>
-          <Trending />
+          <DryFruits />
         </TabPanel>
         <TabPanel value={15}>
-          <Trending />
+          <LentilsPulses />
+        </TabPanel>
+        <TabPanel value={16}>
+          <RiceWheat />
+        </TabPanel>
+        <TabPanel value={17}>
+          <OrganicJuices />
         </TabPanel>
       </TabContext>
     </Box>

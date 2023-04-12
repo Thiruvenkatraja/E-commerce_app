@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
+import { ShoppingCartOutlined, HeartOutlined } from "@ant-design/icons";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -45,8 +46,7 @@ function Navbar() {
       position="sticky"
       sx={{
         backgroundColor: "#FAF7F0",
-          color: "black",
-        
+        color: "black",
       }}
     >
       <Container maxWidth="lg">
@@ -140,7 +140,13 @@ function Navbar() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex",gap:"10px", justifyContent: "center" },
+              display: {
+                xs: "none",
+                md: "flex",
+                gap: "10px",
+                justifyContent: "center",
+                alignItems: "center",
+              },
             }}
           >
             {navLinks.map((links) => (
@@ -160,6 +166,31 @@ function Navbar() {
                 {links.name}
               </Button>
             ))}
+            <Box
+              sx={{
+                display: "flex",
+                width: "200px",
+                justifyContent: "flex-end",
+                gap: ".5rem",
+              }}
+            >
+              <Button
+                sx={{
+                  minWidth: "10px",
+                }}
+              >
+                <HeartOutlined style={{ scale: "1.4", color: "black" }} />
+              </Button>
+              <Button
+                sx={{
+                  minWidth: "10px",
+                }}
+              >
+                <ShoppingCartOutlined
+                  style={{ scale: "1.4", color: "black" }}
+                />
+              </Button>
+            </Box>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
